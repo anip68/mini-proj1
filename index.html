@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="curriculumApp">
+
+<head>
+  <!-- SCROLLS -->
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+
+  <!-- SPELLS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+  <script src="script.js"></script>
+
+  <style>
+    .foto-perfil {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      border-radius: 100%;
+    }
+
+    p {
+      font-family: 'Helvetica Neue'Arial, Helvetica, sans-serif;
+      color: black;
+
+
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+
+</head>
+
+<!-- define angular controller -->
+
+<body ng-controller="quemSouController">
+
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Curriculum vitae</a>
+      </div>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><i class="fa fa-home"></i> </a></li>
+        <li><a href="#quemSou"><i class="fa fa-male"></i> Quem sou eu?</a></li>
+        <li><a href="#queFaco"><i class="fa fa-comments"></i> O que faço?</a></li>
+        <li><a href="#hobbies"><i class="fa fa-gamepad"></i> Hobbies</a></li>
+        <li><a href="#contatos"><i class="fa fa-envelope"></i> Contactos</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="jumbotron text-center" id="main">
+    <img class="foto-perfil" src="img/Roque.jpg" alt="foto de perfil">
+    <h2 class="jumbotron-heading">Roque Luís Simões Ramos de Pina</h2>
+    <!-- angular templating -->
+    <!-- this is where content will be injected -->
+    <div ng-view></div>
+
+  </div>
+
+
+  <div class="social-media">
+    
+    <ul>
+      <li class="smedia-01"><a href="https://www.facebook.com" target="_blank">
+          <img src="https://elearning.uab.pt/theme/uab_v4/pix/social_ico/icone_fb.png">
+            
+        </a></li>
+      <li class="smedia-03"><a href="https://twitter.com" target="_blank">
+          <img src="https://elearning.uab.pt/theme/uab_v4/pix/social_ico/icone_twitter.png">
+            
+        </a></li>
+      <li class="smedia-02"><a href="https://www.linkedin.com" target="_blank">
+          <img src="https://elearning.uab.pt/theme/uab_v4/pix/social_ico/icone_linkedin.png">
+           
+        </a></li>
+      <li class="smedia-04"><a href="https://www.youtube.com" target="_blank">
+          <img src="https://elearning.uab.pt/theme/uab_v4/pix/social_ico/icone_youtube.png">
+            
+        </a></li>
+    </ul>
+  </div>
+
+  </footer>
+
+  <!--footer class="text-center">
+    <p>View the tutorial on <a href="http://scotch.io/tutorials/javascript/single-page-apps-with-angularjs-routing-and-templating">Scotch.io</a></p>
+  
+    <p>View a tutorial on <a href="http://scotch.io/tutorials/javascript/animating-angularjs-apps-ngview">Animating Your Angular Single Page App</a></p>
+  </footer-->
+
+</body>
+
+</html>
